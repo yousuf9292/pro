@@ -15,3 +15,4 @@ pyngrok
 fpdf
 cdqa
 streamlit
+numpy==1.19.5
