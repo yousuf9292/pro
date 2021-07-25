@@ -53,7 +53,7 @@ if query:
         answer_var=st.write("Answer: "+answer)
         title_var=title.replace(" ","%20")
         #url="https://github.com/hebaarch/docs/raw/main/"+title_var+".pdf"
-        url="https://github.com/mohsinmushtaq-arch/pdf-docs/raw/main/docs/"+title_var+".pdf"
+        url="https://github.com/mohsinmushtaq-arch/pdf-docs/raw/main/docs/"+title_var+
         print(url)
         
         paragraph_var=st.write("Paragraph: " + paragraph)
