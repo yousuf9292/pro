@@ -11,7 +11,6 @@ Original file is located at
 import os
 import streamlit as st
 import pandas as pd
-from ast import literal_eval
 from cdqa.utils.converters import pdf_converter
 from cdqa.pipeline import QAPipeline
 from cdqa.utils.download import download_model
