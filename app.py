@@ -21,9 +21,11 @@ from fpdf import FPDF
 import base64
 import joblib
 
+cwd=os.getcwd()
+docs=cwd+"\\docs\\"
 
 download_model(model='bert-squad_1.1')
-df = pdf_converter(directory_path='./docs/')
+df = pdf_converter(directory_path=docs)
 print(df.head())
 #
 pd.set_option('display.max_colwidth', -1)
