@@ -46,7 +46,7 @@ st.title('Query Answering AI Bot')
 query=st.text_input("Enter Text: ")
 
 @st.cache()
-def abc()
+def abc():
     if query:
         prediction= cdqa_pipeline.predict(query, n_predictions=n_predictions)
         print(prediction)
