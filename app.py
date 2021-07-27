@@ -45,22 +45,24 @@ st.title('Query Answering AI Bot')
 
 query=st.text_input("Enter Text: ")
 
-if query:
-    prediction= cdqa_pipeline.predict(query, n_predictions=n_predictions)
-    print(prediction)
-    for i,value in enumerate(prediction):
-        answer,title,paragraph,predictionsss=value
-        answer_var=st.write("Answer: "+answer)
-        title_var=title.replace(" ","%20")
-        #url="https://github.com/hebaarch/docs/raw/main/"+title_var+".pdf"
-        url="https://github.com/mohsinmushtaq-arch/pdf-docs/raw/main/docs/"+title_var
-        print(url)
+@st.cache()
+def abc()
+    if query:
+        prediction= cdqa_pipeline.predict(query, n_predictions=n_predictions)
+        print(prediction)
+        for i,value in enumerate(prediction):
+            answer,title,paragraph,predictionsss=value
+            answer_var=st.write("Answer: "+answer)
+            title_var=title.replace(" ","%20")
+            #url="https://github.com/hebaarch/docs/raw/main/"+title_var+".pdf"
+            url="https://github.com/mohsinmushtaq-arch/pdf-docs/raw/main/docs/"+title_var
+            print(url)
         
-        paragraph_var=st.write("Paragraph: " + paragraph)
-        #download_button = st.button(title+'_no:'+str(i))
-        #download_button = st.markdown(url, unsafe_allow_html=True)
-        #st.markdown("<a style='display: block; text-align: center;' href= url > Download report</a>",unsafe_allow_html=True,)
-        st.markdown("Download This Report Here [link](%s)" % url)
+            paragraph_var=st.write("Paragraph: " + paragraph)
+            #download_button = st.button(title+'_no:'+str(i))
+            #download_button = st.markdown(url, unsafe_allow_html=True)
+            #st.markdown("<a style='display: block; text-align: center;' href= url > Download report</a>",unsafe_allow_html=True,)
+            st.markdown("Download This Report Here [link](%s)" % url)
         
-        #if download_button:
-            #st.markdown(url, unsafe_allow_html=True)
+            #if download_button:
+                #st.markdown(url, unsafe_allow_html=True)
